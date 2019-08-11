@@ -1,11 +1,7 @@
-from typing import List
-
-
-def generate_prime():
+def generate_prime(max):
     """ Program to generate primes to a fixed maximum for use on some of the Project Euler
         tasks. Danielle Rosenfeld-Lovell, July 2019."""
-    max = 50
-    lst: List[int] = []
+    lst_prime = []
 
     # select every number up to max and determine whether it is a prime
     for num in range(2, max):
@@ -15,12 +11,11 @@ def generate_prime():
         for divisor in range(2, num):
             if num % divisor == 0:
                 is_prime = False
+                break
 
     # finish by creating a total list of primes up to specified range
         if is_prime:
-            lst.append(num)
+            lst_prime.append(num)
 
-    print(lst)
-    return lst
-
-generate_prime()
+    print(lst_prime)
+    return lst_prime
