@@ -12,8 +12,7 @@ def three_and_five():
         if (num % 3 == 0 or num % 5 == 0):
             sum_multiples+=num
             # Otherwise just keep looping until we reach 1000
-
-    print(sum_multiples)
+    
     return sum_multiples
 
 
