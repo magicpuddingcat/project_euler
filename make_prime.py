@@ -8,7 +8,7 @@ def generate_prime(max):
         is_prime = True
 
         # loop through divisors and then break as soon as there is found to be a factor
-        for divisor in range(2, num):
+        for divisor in range(2, sqrt(num)):
             if num % divisor == 0:
                 is_prime = False
                 break
